@@ -1,0 +1,28 @@
+/* Cascading Stylesheets */
+/* CSS selector */
+
+.header {
+	text-align: center;
+	padding: 5%;
+}
+
+.health-bar {
+	color: white;
+	background: grey;
+	width: 300px;
+	padding: 40px 10%;
+	display: inline-block;
+	width: 50%;
+}
+
+.health-bar-inner {
+	background: green;
+	height: 40px;
+	width: 100%;
+
+}
+
+#buttons {
+	text-align: center;
+	margin-top: 50px;
+}

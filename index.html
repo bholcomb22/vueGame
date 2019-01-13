@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <title></title>
+  </head>
+  <body>
+   
+        <div id="app">
+            <div class="header">
+                <h1>A Vue.js-based battle game</h1>
+            </div>
+            <div class="health-bar">
+                <h2>Player Health</h2>
+                <div class="health-bar-inner" v-bind:style="{ width: playerHealth + '%' }">
+                    <h4>{{playerHealth}}</h4>
+                </div>
+            </div><!--
+         --><div class="health-bar">
+                <h2>Monster Health</h2>
+                <div class="health-bar-inner" v-bind:style="{ width: monsterHealth + '%' }">
+                    <h4>{{monsterHealth}}</h4>
+                </div>
+            </div>
+        
+        <section id="buttons">
+            <div v-if="!isRunning">
+                <button type="button" v-on:click="start">Start Game</button>
+            </div>
+            <div v-else>
+                <button class="attack" type="button" v-on:click="attack(10, 3); reset();">Attack</button>
+                <button class="special" type="button" v-on:click="attack(13, 5); reset();">Special</button>
+                <button class="heal" type="button" v-on:click="heal(); reset()">Heal</button>
+                <button class="give-up" type="button" v-on:click="start">Give up</button>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+    <!-- vueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- j query -->
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <!-- javaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
+
